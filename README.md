@@ -25,6 +25,26 @@
 ## 4. How does it work?
 
 ### 4.1 Create the map
+1. Open QGIS and import the base file "BASEMAP_Swisstopo_Lakes_WGS84.geojson"
+2. Duplicate the layer, toggle edit and delete all lake that you don't want to work on. Rename the layer e.g. "LakeZurich"
+3. Toolbox -> Reproject to "EPSG:2056 - CH1903+ / LV95" -> so we can buffer by meter -> temporary layer is enough
+4. Toolbox -> Buffer to -150m and -300m. Temporary is enough. We need 
+5. Toolbox -> Reproject to "WGS84" both. and save the them to Geopackage named e.g. "LakeZurich-150m_WGS84" and "LakeZurich-300m_WGS84"
+6. Toolbox -> Vertics and save the them to Geopackage named e.g. "LakeZurich-150m_Vertics_WGS84" and "LakeZurich-300m_Vertics_WGS84"
+SAVE!
+
+**Optional**
+If you want to create background maps/ images. Do it with WMS
+Link: https://wms.geo.admin.ch/?VERSION=1.3.0&LAYERS=ch.bafu.bundesinventare-bln&STYLES=default&CRS=EPSG:2056&BBOX=2550000,1060000,2660000,1140000&WIDTH=800&HEIGHT=582 <br>
+
+1. SWISS IMAGES
+2. 100'000
+
+
+Create a list with points: 
+-> Attribute table
+-> Python script
+
 
 ### 4.2 Create the Hardware
 
