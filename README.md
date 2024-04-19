@@ -16,13 +16,13 @@
 
 
 
-## Introduction (Summary)
+## 1. Introduction (Summary)
 
-## My goals for this project
+## 2. My goals for this project
 
-## Usecase
+## 3. Usecase
 
-## How does it work?
+## 4. How does it work?
 
 ### 4.1 Create the map
 
@@ -30,6 +30,6 @@
 
 ### 4.3 Create the software
 
-## My tests
+## 5. My tests
 
-## Conclusion
+## 6. Conclusion
