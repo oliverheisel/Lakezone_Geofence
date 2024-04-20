@@ -53,17 +53,16 @@ If you are using a not so powerfull board to run the script, you need to reduce 
 4. Change everything that you like - Change the zones/ Delete Points
 
 
-<table>
-  <tr>
-    <!-- Image side -->
-    <td><img src="ReadmeFiles/Image_RemovedZoneSeebecken.png" alt="Alt text for image" width="500px"></td>
+<div style="display: flex; align-items: center;">
+  <div style="flex: 50%;">
+    <img src="ReadmeFiles/Image_RemovedZoneSeebecken.png" alt="Alt text for image" style="width: 100%; height: auto;">
+  </div>
+  <div style="flex: 50%;">
+    <h1>Title</h1>
+    <p>Description or other content goes here...</p>
+  </div>
+</div>
 
-    <!-- Text side -->
-    <td>
-      <p>Das hier ist die Text Seite..</p>
-    </td>
-  </tr>
-</table>
 
 
 
