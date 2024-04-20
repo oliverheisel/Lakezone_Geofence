@@ -44,8 +44,12 @@ Link: https://wms.geo.admin.ch/?VERSION=1.3.0&LAYERS=ch.bafu.bundesinventare-bln
 
 
 
-**Optional 2**
+**Optional 2** - Manipulation and reduction (if you do it before converting it to Vertics, you just have to do it once.)
 If you are using a not so powerfull board to run the script, you need to reduce the count of points. The most effective method for is to narrow down your polygons.
+1. Choose the Map you want to work on
+2. Toggle Editing 
+3. Click on the Vertex-Tool
+4. Change everything that you like - Change the zones/ Delete Points
 
 Create a list with points: 
 -> Attribute table
