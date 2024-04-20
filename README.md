@@ -59,9 +59,11 @@ For example the "Seebecken in Zurich has a special rule wich allign with the rul
 Here you also can see the vertics, that describe the polygon. Its basicly nothing else then the points where the outline of the polygone changes its direction.
 
 <br clear="left"/>
-
+<br>
+<br>
 Since I am using a Arduino Nano for my project, i need to reduce the count of the points. I decided to not simplify the form, to keep the accuracy, and just keep the part, where I will be mainly using it.
-
+So Area between Zurich and Thalwil. (4265 Point reduced to around 600
+<br>
 ![MapAfterCreatingZones](ReadmeFiles/Image_ReducedArea.png)
 
 
