@@ -53,16 +53,16 @@ If you are using a not so powerfull board to run the script, you need to reduce 
 4. Change everything that you like - Change the zones/ Delete Points
 
 
-<div style="display: flex; align-items: center;">
-  <div style="flex: 50%;">
-    <img src="ReadmeFiles/Image_RemovedZoneSeebecken.png" alt="Alt text for image" style="width: 100%; height: auto;">
-  </div>
-  <div style="flex: 50%;">
-    <h1>Title</h1>
-    <p>Description or other content goes here...</p>
-  </div>
-</div>
+<img src="ReadmeFiles/Image_RemovedZoneSeebecken.png" align="left" width="500px"/>
+For example the "Seebecken in Zurich has a special rule wich allign with the rule for the first 150m from shore. So I just deleted the part of the 300 zone.
 
+Here you also can see the vertics, that describe the polygon. Its basicly nothing else then the points where the outline of the polygone changes its direction.
+
+<br clear="left"/>
+
+Since I am using a Arduino Nano for my project, i need to reduce the count of the points. I decided to not simplify the form, to keep the accuracy, and just keep the part, where I will be mainly using it.
+
+![MapAfterCreatingZones](ReadmeFiles/Image_ReducedArea.png)
 
 
 
