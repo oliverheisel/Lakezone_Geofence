@@ -40,6 +40,10 @@ Link: https://wms.geo.admin.ch/?VERSION=1.3.0&LAYERS=ch.bafu.bundesinventare-bln
 1. SWISS IMAGES
 2. 100'000
 
+![MapAfterCreatingZones](ReadmeFiles/Image_Map-ZonesCreated.png)
+
+
+
 **Optional 2**
 If you are using a not so powerfull board to run the script, you need to reduce the count of points. The most effective method for is to narrow down your polygons.
 
