@@ -30,7 +30,8 @@
 3. Toolbox -> Reproject to "EPSG:2056 - CH1903+ / LV95" -> so we can buffer by meter -> temporary layer is enough
 4. Toolbox -> Buffer to -150m and -300m. Temporary is enough. We need 
 5. Toolbox -> Reproject to "WGS84" both. and save the them to Geopackage named e.g. "LakeZurich-150m_WGS84" and "LakeZurich-300m_WGS84"
-6. Toolbox -> Vertics and save the them to Geopackage named e.g. "LakeZurich-150m_Vertics_WGS84" and "LakeZurich-300m_Vertics_WGS84"
+   // before continuting with the next step. Have a look at optional 2 (Manipulation the created zones)
+7. Toolbox -> Vertics and save the them to Geopackage named e.g. "LakeZurich-150m_Vertics_WGS84" and "LakeZurich-300m_Vertics_WGS84"
 SAVE!
 
 **Optional**
@@ -50,6 +51,22 @@ If you are using a not so powerfull board to run the script, you need to reduce 
 2. Toggle Editing 
 3. Click on the Vertex-Tool
 4. Change everything that you like - Change the zones/ Delete Points
+
+
+<table>
+  <tr>
+    <!-- Image side -->
+    <td><img src="ReadmeFiles/Image_RemovedZoneSeebecken.png" alt="Alt text for image" width="500px"></td>
+
+    <!-- Text side -->
+    <td>
+      <p>Das hier ist die Text Seite..</p>
+    </td>
+  </tr>
+</table>
+
+
+
 
 Create a list with points: 
 -> Attribute table
