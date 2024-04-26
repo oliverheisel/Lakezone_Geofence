@@ -1,7 +1,7 @@
 # Lakezones Geofence
  Check in wich zone you are and what you are allowed to do:
 
-[Device](ReadmeFiles/Device.png)
+![Device](ReadmeFiles/Device.png)
 
 
 ## Table of Contents:
