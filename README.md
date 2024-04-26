@@ -93,7 +93,7 @@ Create a copy of the **Wokwi project** and modify it according to your needs: [h
 
 ### 4.3 Create the software
 
-Find the software for the arduino [here](Arduino_Scripts/CheckCoordinatesSpeedBlinking10.ino).
+Find the script for the arduino [here](Arduino_Scripts/CheckCoordinatesSpeedBlinking10.ino). The script is commented and filled with sample coordinates of Lake Zurich.
 
 ## 5. My tests
 
