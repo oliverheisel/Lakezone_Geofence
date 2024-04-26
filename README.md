@@ -1,13 +1,9 @@
-# Lakezones Geofence
-## 1. Introduction (Summary)
+# Lakezone Geofence
 
- Check in wich zone you are and what you are allowed to do:
-
-![Device](ReadmeFiles/HeaderImage.png)
-
+<img src="ReadmeFiles/HeaderImage.png" align="left" width="600px"/>
 
 ## Table of Contents:
-[1. Introduction (Summary)](#1-introduction-summary) <br>
+[1. Introduction](#1-introduction) <br>
 [2. My goals for this project](#2-my-goals-for-this-project) <br>
 [3. Usecase](#3-usecase) <br>
 [4. How does it work?](#4-how-does-it-work) <br>
@@ -16,9 +12,14 @@
 &nbsp;&nbsp;[4.3 Create the software](#43-create-the-software) <br>
 [5. My tests](#5-my-tests) <br>
 [6. Conclusion](#6-conclusion) <br>
+[7. Credits](#6-conclusion) <br>
 
+<br clear="left"/>
+<br>
 
+ ## 1. Introduction
 
+Auch auf dem Wasser gibt es Verkehrsregeln. Um Schwimmer, SUPer und Tiere zu schützen bestehen besondere Regeln für die Uferzonen vor Seen
 ## 2. My goals for this project
 
 ## 3. Usecase
@@ -149,4 +150,9 @@ This streamlined approach ensures efficient data handling and responsive output 
 
 ## 6. Conclusion
 - Es war sehr interessant herauszufinden, wie man Karten entsprechend bearbeiten kann, um sie in eine Probgrammierung einzubinden.
+- Der schwersste Teile, war die Karte für die Programmierung bereitzustellen. Als zwischenschritt habe ich die aktuelle GPS Position auf dem Display ausgegeben, ohne die Zone zu prüfen. Das war leicht.
 - Der Unique Selling Point ist nicht gegeben. Eine kommerzielle Verwertung des Projektes hätte keinen Erfolg, da die Wasserschutzpolizei auch nicht genau kontrolliert, sondern auf den guten Menschenverstand abzielt.
+
+## 7. Credits
+- Mauer vom HSLU Data SCIENCE Programm
+- Juliette für die Unterstützung mit den Karten und Beatnwortung meiner GIS Fragen.
