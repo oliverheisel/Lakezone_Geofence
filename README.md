@@ -81,14 +81,13 @@ Create a list with points:
 **What you need:**
 - Arduino (Nano)
 - GPS-Modul
-- 3 LEDs (red/yellow/green)
-- 3 resistors (220 Ω)
+- 3x LEDs (red/yellow/green)
+- 3x resistors (220 Ω)
 - LCD Display (optional)
 - Power Source (PowerBank with cable)
-- Several calbes to solder or pin the circutes
+- Several cables to solder or pin the circuits.
 
 **Circuit diagram**
-
 ![CircuitDiagramm](ReadmeFiles/circuitdiagram.png)
 
 Create a copy of the **Wokwi project** and modify it according to your needs: [https://wokwi.com/projects/396244731597052929](https://wokwi.com/projects/396244731597052929)
