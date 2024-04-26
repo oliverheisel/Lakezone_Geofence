@@ -1,0 +1,7 @@
+TinyGPS++.h: This library facilitates communication with the GPS module and the interpretation of GPS data.
+
+SoftwareSerial.h: Enables communication over digital pins of the Arduino, functioning as a serial interface.
+
+LiquidCrystal_I2C.h: Controls the LCD display via the I2C bus.
+
+avr/pgmspace.h: Allows large amounts of data to be stored in the Arduino's flash memory, conserving RAM.
