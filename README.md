@@ -73,10 +73,24 @@ So Area between Zurich and Thalwil. (4265 Point reduced to around 600)
 
 
 
+**Create a list with points for the software:**
+Export the Attribute table
+1. right click on the layer with vertics
+2. "just show feature visible on map" (bottom left)
+3. Click "open Attribute Table"
+4. Open fiel calculator
+5. Create new field (Expression: "x($geometry)")
+6. Repeat with (Expression: "y($geometry)")
+7. Check the x and y column
+8. Close the Attribute table
+9. Right click on the layer and click "Export" & "Save Feature as..."
+10. Save as CSV
 
-Create a list with points: 
--> Attribute table
--> Python script
+**Restructure the List of Points, so it can be copyed and pasted into the arduino script**
+1. Open the python script "CreateListOfPoints.py"
+2. Change the paths to your previously created csv's
+3. Run the script
+4. Copy the output to your software and replace the existing coordinates (WATCH OUT! Don't swap X and Y)
 
 
 ### 4.2 Create the Hardware
