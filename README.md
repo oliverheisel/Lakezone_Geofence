@@ -24,6 +24,10 @@
 ## 2. My goals for this project
 
 ## 3. Usecase
+- auf Binnenseene gibt es unterschiedliche Zonen, für die unterschiedliceh Regeln gelten
+- Vorallem in der Schweiz kann dies zu gravierenden Bussgeldern führen
+
+- Von Bootsführer ist vorgesehen, die Abstände zu schätzen. Das mag einfach seinen, wenn man Zeit hat und nur einmal rausfährt. Als Trainier von Junioren kann dies jedoch öfter hinterannder passieren. Um keine Strage zu risikieren, lassen sich so die Abstände besser einschätzen,
 
 ## 4. How does it work?
 
