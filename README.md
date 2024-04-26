@@ -87,6 +87,8 @@ Create a list with points:
 - Power Source (PowerBank with cable)
 - Several calbes to solder or pin the circutes
 
+**Circuit diagram**
+
 ![CircuitDiagramm](ReadmeFiles/circuitdiagram.png)
 
 Create a copy of the **Wokwi project** and modify it according to your needs: [https://wokwi.com/projects/396244731597052929](https://wokwi.com/projects/396244731597052929)
@@ -97,19 +99,19 @@ Find the script for the arduino [here](Arduino_Scripts/CheckCoordinatesSpeedBlin
 
 The software setup for this project involves the following key components and steps:
 
-Initialization
+**Initialization**
 The system initializes by setting up the libraries needed for GPS data processing (TinyGPS++), serial communication (SoftwareSerial), and LCD display control (LiquidCrystal_I2C). It configures the pins for the GPS module, LEDs, and LCD, and establishes serial connections for both GPS data reception and debugging output.
 
-GPS Data Processing
+**GPS Data Processing**
 The software continuously reads from the GPS module, parsing latitude, longitude, and speed using the TinyGPS++ library. This parsed data drives the application's logic flow.
 
-Geofencing with Ray-Casting
+**Geofencing with Ray-Casting**
 Utilizing the Ray-Casting algorithm, the software determines the presence of the device within predefined polygonal geofences. Based on the device's location:
+- Red LED indicates outside both polygons.
+- Yellow LED signals presence within the larger polygon.
+- Green LED lights up within the smaller polygon.
 
-Red LED indicates outside both polygons.
-Yellow LED signals presence within the larger polygon.
-Green LED lights up within the smaller polygon at speeds over 40 km/h.
-LED and LCD Management
+**LED and LCD Management**
 LED behavior is controlled based on the geolocation data and speed, with LEDs blinking faster at higher speeds. The LCD displays real-time updates of the current geographical coordinates. The software employs non-blocking delay techniques using millis() to manage LED blinking without halting the system.
 
 This streamlined approach ensures efficient data handling and responsive output through the hardware interfaces, integrating technical operations into a cohesive system.
