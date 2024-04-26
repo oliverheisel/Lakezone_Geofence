@@ -1,6 +1,9 @@
 # Lakezones Geofence
  Check in wich zone you are and what you are allowed to do:
 
+[Device](ReadmeFiles/Device.png)
+
+
 ## Table of Contents:
 [1. Introduction (Summary)](#1-introduction-summary) <br>
 [2. My goals for this project](#2-my-goals-for-this-project) <br>
