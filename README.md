@@ -95,6 +95,25 @@ Create a copy of the **Wokwi project** and modify it according to your needs: [h
 
 Find the script for the arduino [here](Arduino_Scripts/CheckCoordinatesSpeedBlinking10.ino). The script is commented and filled with sample coordinates of Lake Zurich.
 
+The software setup for this project involves the following key components and steps:
+
+Initialization
+The system initializes by setting up the libraries needed for GPS data processing (TinyGPS++), serial communication (SoftwareSerial), and LCD display control (LiquidCrystal_I2C). It configures the pins for the GPS module, LEDs, and LCD, and establishes serial connections for both GPS data reception and debugging output.
+
+GPS Data Processing
+The software continuously reads from the GPS module, parsing latitude, longitude, and speed using the TinyGPS++ library. This parsed data drives the application's logic flow.
+
+Geofencing with Ray-Casting
+Utilizing the Ray-Casting algorithm, the software determines the presence of the device within predefined polygonal geofences. Based on the device's location:
+
+Red LED indicates outside both polygons.
+Yellow LED signals presence within the larger polygon.
+Green LED lights up within the smaller polygon at speeds over 40 km/h.
+LED and LCD Management
+LED behavior is controlled based on the geolocation data and speed, with LEDs blinking faster at higher speeds. The LCD displays real-time updates of the current geographical coordinates. The software employs non-blocking delay techniques using millis() to manage LED blinking without halting the system.
+
+This streamlined approach ensures efficient data handling and responsive output through the hardware interfaces, integrating technical operations into a cohesive system.
+
 ## 5. My tests
 
 ## 6. Conclusion
