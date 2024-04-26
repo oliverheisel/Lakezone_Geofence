@@ -95,7 +95,7 @@ Create a copy of the **Wokwi project** and modify it according to your needs: [h
 
 ### 4.3 Create the software
 
-Find the script for the arduino [here](Arduino_Scripts/CheckCoordinatesSpeedBlinking10.ino). The script is commented and filled with sample coordinates of Lake Zurich.
+Find the script for the arduino [here](Arduino_Scripts/CheckCoordinatesSpeedBlinking10.ino). And requirements [here](Arduino_Scripts/requirements.txt). The script is commented and filled with sample coordinates of Lake Zurich.
 
 The software setup for this project involves the following key components and steps:
 
@@ -112,7 +112,7 @@ Utilizing the Ray-Casting algorithm, the software determines the presence of the
 - Green LED lights up within the smaller polygon.
 
 **LED and LCD Management** <br>
-LED behavior is controlled based on the geolocation data and speed, with LEDs blinking faster at higher speeds. The LCD displays real-time updates of the current geographical coordinates. The software employs non-blocking delay techniques using millis() to manage LED blinking without halting the system.
+LED behavior is controlled based on the geolocation data and speed, with LEDs blikin, when the allowed speed is exceeded (10 km/h - red / 10 km/h - yellow / 40 km/h - green) . The LCD displays real-time updates of the current geographical coordinates. The software employs non-blocking delay techniques using millis() to manage LED blinking without halting the system.
 
 This streamlined approach ensures efficient data handling and responsive output through the hardware interfaces, integrating technical operations into a cohesive system.
 
