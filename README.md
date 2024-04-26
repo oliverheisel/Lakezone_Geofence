@@ -78,7 +78,7 @@ Create a list with points:
 
 ### 4.2 Create the Hardware
 
-**What do you need:**
+**What you need:**
 - Arduino (Nano)
 - GPS-Modul
 - 3 LEDs (red/yellow/green)
@@ -88,6 +88,8 @@ Create a list with points:
 - Several calbes to solder or pin the circutes
 
 ![CircuitDiagramm](ReadmeFiles/circuitdiagram.png)
+
+Create a copy of the wokwi project and modify it according to your needs: [https://wokwi.com/projects/396244731597052929](https://wokwi.com/projects/396244731597052929)
 
 ### 4.3 Create the software
 
