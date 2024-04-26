@@ -120,4 +120,6 @@ This streamlined approach ensures efficient data handling and responsive output 
 
 ## 5. My tests
 
+![TheColorTest](ReadmeFiles/AllColors.png)
+
 ## 6. Conclusion
