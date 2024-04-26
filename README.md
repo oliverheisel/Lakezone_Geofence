@@ -78,6 +78,17 @@ Create a list with points:
 
 ### 4.2 Create the Hardware
 
+**What do you need:**
+- Arduino (Nano)
+- GPS-Modul
+- 3 LEDs (red/yellow/green)
+- 3 resistors (220 Ω)
+- LCD Display (optional)
+- Power Source (PowerBank with cable)
+- Several calbes to solder or pin the circutes
+
+![CircuitDiagramm](ReadmeFiles/circuitdiagram.png)
+
 ### 4.3 Create the software
 
 ## 5. My tests
