@@ -1,4 +1,6 @@
 # Lakezones Geofence
+## 1. Introduction (Summary)
+
  Check in wich zone you are and what you are allowed to do:
 
 ![Device](ReadmeFiles/HeaderImage.png)
@@ -17,17 +19,16 @@
 
 
 
-
-
-## 1. Introduction (Summary)
-
 ## 2. My goals for this project
 
 ## 3. Usecase
 - auf Binnenseene gibt es unterschiedliche Zonen, für die unterschiedliceh Regeln gelten
 - Vorallem in der Schweiz kann dies zu gravierenden Bussgeldern führen
+- Ziel der Vorschriften ist es, Schwimmer, SUpper und Tiere in der Uferzone zu schützen.
+- 
 
 - Von Bootsführer ist vorgesehen, die Abstände zu schätzen. Das mag einfach seinen, wenn man Zeit hat und nur einmal rausfährt. Als Trainier von Junioren kann dies jedoch öfter hinterannder passieren. Um keine Strage zu risikieren, lassen sich so die Abstände besser einschätzen,
+- Die Wasserschutzpolizei führt die Messungen auf zwei Arten durch. zum einen mit einem Fernglas mit integriertem Distanzmesser oder via Kartenplotter und der eingezeichneten 300m Zone. Beide Methoden lassen keine genuaen Messungen zu.
 
 ## 4. How does it work?
 
@@ -137,7 +138,15 @@ LED behavior is controlled based on the geolocation data and speed, with LEDs bl
 This streamlined approach ensures efficient data handling and responsive output through the hardware interfaces, integrating technical operations into a cohesive system.
 
 ## 5. My tests
+- Ich habe mehrere Test gemacht, welche mehrer Iterationen zur Fehlerbehebung benötigt haben. Teil simple Fehler führen zu vollständigen unfähigkeit des Gerätes.
+- Zonen werden akurat angezeigt und wechseln die Farbe.
+- Geschwindifkeit stimmt der eines Speedometers des iphones überein und es fängt den Geschwindigfkeitsvorschriften an entsprechend zu blinken
+- IKEA Boxen sind die Idealen COntainer für Prototypen. Wasserdicht und haben genug platz.
+- Das Ersetzen von LED Durch "Leucht-Würmer" von AliExpress erhöht die Sichtbarkeit auch bei Sonnenschein.
+- 
 
 ![TheColorTest](ReadmeFiles/AllColors.png)
 
 ## 6. Conclusion
+- Es war sehr interessant herauszufinden, wie man Karten entsprechend bearbeiten kann, um sie in eine Probgrammierung einzubinden.
+- Der Unique Selling Point ist nicht gegeben. Eine kommerzielle Verwertung des Projektes hätte keinen Erfolg, da die Wasserschutzpolizei auch nicht genau kontrolliert, sondern auf den guten Menschenverstand abzielt.
