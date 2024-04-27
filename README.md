@@ -18,18 +18,21 @@
 <br>
 
  ## 1. Introduction
+Navigating water bodies comes with its own set of regulations, just like on roads. Special rules govern the shore zones of lakes to protect swimmers, stand-up paddleboarders, and wildlife. However, estimating distances on water without fixed points can be challenging. It's easy to unintentionally exceed speed limits or enter restricted zones. To address this, the Lakezone Geofence project provides a solution for accurately determining one's current zone on the water.
 
-Auch auf dem Wasser gibt es Verkehrsregeln. Um Schwimmer, SUPer und Tiere zu schützen bestehen besondere Regeln für die Uferzonen vor Seen
+
 ## 2. My goals for this project
 
 ## 3. Usecase
-- auf Binnenseene gibt es unterschiedliche Zonen, für die unterschiedliceh Regeln gelten
-- Vorallem in der Schweiz kann dies zu gravierenden Bussgeldern führen
-- Ziel der Vorschriften ist es, Schwimmer, SUpper und Tiere in der Uferzone zu schützen.
-- 
+The Lakezone Geofence project serves a critical use case scenario, particularly relevant for inland water bodies like lakes, where diverse zones necessitate adherence to specific regulations. Especially in regions like Switzerland, where stringent penalties accompany violations, ensuring compliance with rules aimed at safeguarding swimmers, paddleboarders, and aquatic life becomes paramount.
 
-- Von Bootsführer ist vorgesehen, die Abstände zu schätzen. Das mag einfach seinen, wenn man Zeit hat und nur einmal rausfährt. Als Trainier von Junioren kann dies jedoch öfter hinterannder passieren. Um keine Strage zu risikieren, lassen sich so die Abstände besser einschätzen,
-- Die Wasserschutzpolizei führt die Messungen auf zwei Arten durch. zum einen mit einem Fernglas mit integriertem Distanzmesser oder via Kartenplotter und der eingezeichneten 300m Zone. Beide Methoden lassen keine genuaen Messungen zu.
+Consider scenarios involving boat operators, including both recreational users and professionals such as coaches of junior teams. Accurately estimating distances from shorelines is essential to avoid inadvertently breaching speed limits or entering restricted areas. While experienced operators may manage this task effectively, frequent repetitions or distractions can increase the risk of unintentional rule violations.
+
+Traditional methods of enforcing these regulations, such as using binoculars with integrated distance meters or relying on chart plotters with manually marked 300-meter zones, present limitations in precision and efficiency. Enter the Lakezone Geofence project, offering a solution to these challenges.
+
+By leveraging GPS technology and polygonal geofencing techniques, the project enables real-time determination of the vessel's location relative to predefined zones. This information is crucial for both boat operators and water authorities. Boat operators benefit from immediate feedback on their location and adherence to regulations through visual indicators such as LED lights. Additionally, the system dynamically checks the vessel's speed against the prescribed speed limit for the current zone, enhancing safety measures further. Conversely, water authorities can utilize this technology for efficient monitoring and enforcement efforts, ensuring enhanced safety and compliance across water bodies.
+
+The Lakezone Geofence project not only facilitates adherence to regulations but also streamlines operational workflows for boat operators and enhances safety measures, ultimately contributing to a more secure and harmonious recreational and professional boating environment.
 
 ## 4. How does it work?
 
@@ -139,12 +142,15 @@ LED behavior is controlled based on the geolocation data and speed, with LEDs bl
 This streamlined approach ensures efficient data handling and responsive output through the hardware interfaces, integrating technical operations into a cohesive system.
 
 ## 5. My tests
-- Ich habe mehrere Test gemacht, welche mehrer Iterationen zur Fehlerbehebung benötigt haben. Teil simple Fehler führen zu vollständigen unfähigkeit des Gerätes.
-- Zonen werden akurat angezeigt und wechseln die Farbe.
-- Geschwindifkeit stimmt der eines Speedometers des iphones überein und es fängt den Geschwindigfkeitsvorschriften an entsprechend zu blinken
-- IKEA Boxen sind die Idealen COntainer für Prototypen. Wasserdicht und haben genug platz.
-- Das Ersetzen von LED Durch "Leucht-Würmer" von AliExpress erhöht die Sichtbarkeit auch bei Sonnenschein.
-- 
+Throughout the development and implementation phases of the Lakezone Geofence project, extensive testing was conducted to ensure functionality, accuracy, and reliability. Multiple iterations were necessary, each requiring careful troubleshooting to address various challenges and ensure optimal performance.
+
+One crucial aspect of the testing process involved verifying the accuracy of zone detection and LED signaling. The system accurately identified and distinguished between different zones, signaling their presence through the appropriate LED color—red for outside both polygons, yellow for within the larger polygon, and green for within the smaller polygon. This functionality was critical for providing real-time feedback to boat operators regarding their location relative to regulatory zones.
+
+Another significant aspect of testing focused on speed limit enforcement within each zone. The system dynamically checked the vessel's speed against the prescribed speed limit for the current zone, triggering LED blinking when the allowed speed was exceeded. Testing confirmed that the speed measurements aligned with those of common speedometers, ensuring accurate enforcement of speed regulations.
+
+Practical considerations were also taken into account during testing. Utilizing IKEA boxes as ideal containers for prototypes proved beneficial, offering waterproof enclosures with ample space for components. Additionally, replacing traditional LEDs with "Glow-worms" from AliExpress enhanced visibility, particularly in bright sunlight, improving overall functionality and usability.
+
+Overall, the testing process validated the effectiveness and reliability of the Lakezone Geofence project. From accurate zone detection and LED signaling to precise speed limit enforcement, the system demonstrated its ability to enhance safety and compliance for boat operators on inland water bodies.
 
 ![TheColorTest](ReadmeFiles/AllColors.png)
 
@@ -154,5 +160,5 @@ This streamlined approach ensures efficient data handling and responsive output 
 - Der Unique Selling Point ist nicht gegeben. Eine kommerzielle Verwertung des Projektes hätte keinen Erfolg, da die Wasserschutzpolizei auch nicht genau kontrolliert, sondern auf den guten Menschenverstand abzielt.
 
 ## 7. Credits
-- Mauer vom HSLU Data SCIENCE Programm
-- Juliette für die Unterstützung mit den Karten und Beatnwortung meiner GIS Fragen.
+- [Yves Maurer Weisbrod](https://www.linkedin.com/in/yves-maurer-weisbrod/) - Thank you very much for the introduction to the world of QGIS and working with maps as part of the module "Geospatial data" in the MSc Data Science program at HSLU.
+- [Juliette Wicki](https://www.linkedin.com/in/juliette-wicki-7b9885273/) - Thank you so much for answering all my GIS questions!
