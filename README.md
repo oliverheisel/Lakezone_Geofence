@@ -1,8 +1,8 @@
 # Lakezone Geofence
 
-<img src="ReadmeFiles/HeaderImage.png" align="left" width="600px"/>
+<img src="ReadmeFiles/HeaderImage.png" align="left" width="650px"/>
 
-## Table of Contents:
+## Table of contents:
 [1. Introduction](#1-introduction) <br>
 [2. My goals for this project](#2-my-goals-for-this-project) <br>
 [3. Usecase](#3-usecase) <br>
@@ -13,15 +13,25 @@
 [5. My tests](#5-my-tests) <br>
 [6. Conclusion](#6-conclusion) <br>
 [7. Credits](#6-conclusion) <br>
-
 <br clear="left"/>
-<br>
 
  ## 1. Introduction
 Navigating water bodies comes with its own set of regulations, just like on roads. Special rules govern the shore zones of lakes to protect swimmers, stand-up paddleboarders, and wildlife. However, estimating distances on water without fixed points can be challenging. It's easy to unintentionally exceed speed limits or enter restricted zones. To address this, the Lakezone Geofence project provides a solution for accurately determining one's current zone on the water.
 
 
 ## 2. My goals for this project
+
+The Lakezone Geofence project emerged from a series of ambitious objectives aimed at both personal and professional growth, as well as the practical application of acquired skills:
+
+1. **Master Thesis Preparation**: A primary goal was to explore the feasibility of integrating GPS technology with Arduino for potential application in my upcoming master's thesis. By embarking on this project, I sought to gain firsthand experience in planning, executing, and troubleshooting a technical endeavor with real-world implications.
+
+2. **Arduino Proficiency**: As a newcomer to Arduino programming, one of my objectives was to gauge the complexity and feasibility of working with Arduino boards. By engaging in this project, I aimed to familiarize myself with Arduino programming paradigms and hardware integration, laying the groundwork for future projects and professional endeavors.
+
+3. **GitHub Project Publication**: Another key goal was to establish a presence on GitHub by publishing my first repository and project. Through this endeavor, I aimed to contribute to the open-source community, share insights gained from the project, and receive feedback from peers and experts in related fields.
+
+4. **Practical Application**: Beyond personal and academic objectives, I aspired to develop a project with tangible real-world applications. By creating the Lakezone Geofence project, I aimed to address a pressing need for accurate zone detection and speed limit enforcement on inland water bodies, ultimately contributing to enhanced safety and compliance in recreational and professional boating environments.
+
+Overall, the goals for this project encompassed a blend of personal growth, technical proficiency, and practical application, culminating in the development of a solution with the potential to make a meaningful impact in its domain.
 
 ## 3. Usecase
 The Lakezone Geofence project serves a critical use case scenario, particularly relevant for inland water bodies like lakes, where diverse zones necessitate adherence to specific regulations. Especially in regions like Switzerland, where stringent penalties accompany violations, ensuring compliance with rules aimed at safeguarding swimmers, paddleboarders, and aquatic life becomes paramount.
@@ -35,6 +45,7 @@ By leveraging GPS technology and polygonal geofencing techniques, the project en
 The Lakezone Geofence project not only facilitates adherence to regulations but also streamlines operational workflows for boat operators and enhances safety measures, ultimately contributing to a more secure and harmonious recreational and professional boating environment.
 
 ## 4. How does it work?
+To replicate the project, the following 3 tasks must be carried out:
 
 ### 4.1 Create the map
 1. Open QGIS and import the base file "BASEMAP_Swisstopo_Lakes_WGS84.geojson"
@@ -47,14 +58,13 @@ The Lakezone Geofence project not only facilitates adherence to regulations but 
 SAVE!
 
 **Optional**
-If you want to create background maps/ images. Do it with WMS
-Link: https://wms.geo.admin.ch/?VERSION=1.3.0&LAYERS=ch.bafu.bundesinventare-bln&STYLES=default&CRS=EPSG:2056&BBOX=2550000,1060000,2660000,1140000&WIDTH=800&HEIGHT=582 <br>
+If you want to create background maps/ images. Do it with WMS - Link: https://wms.geo.admin.ch/?VERSION=1.3.0&LAYERS=ch.bafu.bundesinventare-bln&STYLES=default&CRS=EPSG:2056&BBOX=2550000,1060000,2660000,1140000&WIDTH=800&HEIGHT=582 <br>
 
-1. SWISS IMAGES
-2. 100'000
+Add Layer and choose WMS. Insert the Link above. A long list of background maps (WMS = Images) will be shown. Search for the following ones and add them to your project:
+1. "SWISS IMAGES" - Satelitte image (like in my images)
+2. "Landeskarte 1:100`000" - Map of Switzerland 1:100'000
 
 ![MapAfterCreatingZones](ReadmeFiles/Image_Map-ZonesCreated.png)
-
 
 
 **Optional 2** - Manipulation and reduction (if you do it before converting it to Vertics, you just have to do it once.)
@@ -63,7 +73,8 @@ If you are using a not so powerfull board to run the script, you need to reduce 
 2. Toggle Editing 
 3. Click on the Vertex-Tool
 4. Change everything that you like - Change the zones/ Delete Points
-
+SAVE!
+<br/>
 
 <img src="ReadmeFiles/Image_RemovedZoneSeebecken.png" align="left" width="500px"/>
 For example the "Seebecken in Zurich has a special rule wich allign with the rule for the first 150m from shore. So I just deleted the part of the 300 zone.
@@ -71,7 +82,7 @@ For example the "Seebecken in Zurich has a special rule wich allign with the rul
 Here you also can see the vertics, that describe the polygon. Its basicly nothing else then the points where the outline of the polygone changes its direction.
 
 <br clear="left"/>
-<br>
+
 <br/>
 Since I am using a Arduino Nano for my project, i need to reduce the count of the points. I decided to not simplify the form, to keep the accuracy, and just keep the part, where I will be mainly using it.
 So Area between Zurich and Thalwil. (4265 Point reduced to around 600)
@@ -155,9 +166,18 @@ Overall, the testing process validated the effectiveness and reliability of the 
 ![TheColorTest](ReadmeFiles/AllColors.png)
 
 ## 6. Conclusion
-- Es war sehr interessant herauszufinden, wie man Karten entsprechend bearbeiten kann, um sie in eine Probgrammierung einzubinden.
-- Der schwersste Teile, war die Karte für die Programmierung bereitzustellen. Als zwischenschritt habe ich die aktuelle GPS Position auf dem Display ausgegeben, ohne die Zone zu prüfen. Das war leicht.
-- Der Unique Selling Point ist nicht gegeben. Eine kommerzielle Verwertung des Projektes hätte keinen Erfolg, da die Wasserschutzpolizei auch nicht genau kontrolliert, sondern auf den guten Menschenverstand abzielt.
+
+The development of the Lakezone Geofence project has been a journey marked by innovation, collaboration, and problem-solving. Exploring the intricacies of geofencing technology and integrating it with GPS systems has provided valuable insights into enhancing safety and compliance on inland water bodies, particularly lakes.
+
+Through the creation of this project, we've delved into the complexities of regulatory compliance in aquatic environments, addressing the need for accurate zone detection and speed limit enforcement. By leveraging GPS technology and polygonal geofencing techniques, we've developed a solution that not only aids boat operators in navigating regulatory zones but also facilitates efficient monitoring and enforcement efforts by water authorities.
+
+The testing phase has been instrumental in validating the functionality and reliability of the system. From accurate zone detection and LED signaling to dynamic speed limit enforcement, the project has demonstrated its ability to enhance safety measures and streamline operational workflows for boat operators and regulatory agencies alike.
+
+However, during the development process, I quickly encountered limitations with the Arduino platform. In future endeavors, I plan to explore alternatives such as the Raspberry Pi Pico and MicroPython, expecting them to offer a more powerful and flexible platform for development while remaining within budget constraints.
+
+While the project may not have a clear commercial application due to the reliance on individuals' adherence to regulations, it stands as a testament to the possibilities of technology in addressing real-world challenges. The knowledge gained from this endeavor will undoubtedly inform future projects and contribute to ongoing efforts in improving safety and compliance across various domains.
+
+In conclusion, the Lakezone Geofence project represents a significant step forward in leveraging technology to promote safety and compliance on inland water bodies. By combining technical expertise with practical insights, we've developed a solution that has the potential to make a meaningful impact in recreational and professional boating environments.
 
 ## 7. Credits
 - [Yves Maurer Weisbrod](https://www.linkedin.com/in/yves-maurer-weisbrod/) - Thank you very much for the introduction to the world of QGIS and working with maps as part of the module "Geospatial data" in the MSc Data Science program at HSLU.
