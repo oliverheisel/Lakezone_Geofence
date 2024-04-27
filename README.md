@@ -1,6 +1,6 @@
 # Lakezone Geofence
 
-<img src="ReadmeFiles/HeaderImage.png" align="left" width="650px"/>
+<img src="ReadmeFiles/HeaderImage.png" align="left" width="600px"/>
 
 ## Table of Contents:
 [1. Introduction](#1-introduction) <br>
