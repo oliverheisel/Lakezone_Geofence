@@ -2,7 +2,7 @@
 
 <img src="ReadmeFiles/HeaderImage.png" align="left" width="650px"/>
 
-## Table of contents:
+## Table of Contents:
 [1. Introduction](#1-introduction) <br>
 [2. My goals for this project](#2-my-goals-for-this-project) <br>
 [3. Usecase](#3-usecase) <br>
@@ -21,7 +21,7 @@ Navigating water bodies comes with its own set of regulations, just like on road
 
 ## 2. My goals for this project
 
-The Lakezone Geofence project emerged from a series of ambitious objectives aimed at both personal and professional growth, as well as the practical application of acquired skills:
+The Lakezone Geofence Project emerged from a series of ambitious objectives aimed at both personal and professional growth, as well as the practical application of acquired skills:
 
 1. **Master Thesis Preparation**: A primary goal was to explore the feasibility of integrating GPS technology with Arduino for potential application in my upcoming master's thesis. By embarking on this project, I sought to gain firsthand experience in planning, executing, and troubleshooting a technical endeavor with real-world implications.
 
@@ -79,7 +79,7 @@ SAVE!
 <img src="ReadmeFiles/Image_RemovedZoneSeebecken.png" align="left" width="500px"/>
 For example the "Seebecken in Zurich has a special rule wich allign with the rule for the first 150m from shore. So I just deleted the part of the 300 zone.
 
-Here you also can see the vertics, that describe the polygon. Its basicly nothing else then the points where the outline of the polygone changes its direction.
+Here you also can see the vertics, that describe the polygon. Its basicly nothing else then the points where the outline of the polygon changes its direction.
 
 <br clear="left"/>
 
@@ -95,7 +95,7 @@ So Area between Zurich and Thalwil. (4265 Point reduced to around 600)
 
 **Create a list with points for the software:**
 Export the Attribute table
-1. right click on the layer with vertics
+1. Right click on the layer with vertics
 2. "just show feature visible on map" (bottom left)
 3. Click "open Attribute Table"
 4. Open fiel calculator
