@@ -131,7 +131,7 @@ Create a copy of the **Wokwi project** and modify it according to your needs: [h
 
 ### 4.3 Create the software
 
-Find the script for the arduino [here](Arduino_Scripts/CheckCoordinatesSpeedBlinking10.ino). And requirements [here](Arduino_Scripts/requirements.txt). The script is commented and filled with sample coordinates of Lake Zurich.
+Find the script for the arduino [here](Arduino_Scripts/Script_LakeZoneGeofence/Script_LakeZoneGeofence.ino). And requirements [here](Arduino_Scripts/requirements.txt). The script is commented and filled with sample coordinates of Lake Zurich.
 
 The software setup for this project involves the following key components and steps:
 
