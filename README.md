@@ -164,6 +164,7 @@ Practical considerations were also taken into account during testing. Utilizing 
 Overall, the testing process validated the effectiveness and reliability of the Lakezone Geofence project. From accurate zone detection and LED signaling to precise speed limit enforcement, the system demonstrated its ability to enhance safety and compliance for boat operators on inland water bodies.
 
 ![TheColorTest](ReadmeFiles/AllColors.png)
+![TheColorTest2](ReadmeFiles/AllColors_NewDevice.png)
 
 ## 6. Conclusion
 
