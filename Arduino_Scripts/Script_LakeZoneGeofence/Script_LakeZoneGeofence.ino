@@ -34,9 +34,11 @@ const uint8_t polySides2 = 65;
 const float polyY2[polySides2] PROGMEM = {47.35003957975, 47.35187943608, 47.35170584389, 47.35154557482, 47.35087503826, 47.35040657514, 47.35034403516, 47.35019731357, 47.35017450461, 47.35010598396, 47.34991474388, 47.34979983818, 47.34980149409, 47.34986971218, 47.34981265115, 47.34981393023, 47.34980644514, 47.34979294878, 47.34970814252, 47.34970335168, 47.34970080635, 47.34966377662, 47.34964804032, 47.3495837662, 47.34952756841, 47.34950108125, 47.34937847984, 47.34930239509, 47.34901099337, 47.34825028019, 47.34814990891, 47.34795373166, 47.3478540691, 47.34753918514, 47.34740552061, 47.34678919099, 47.34256758586, 47.34309363542, 47.34320333704, 47.3433174554, 47.34348995709, 47.34359293565, 47.34395243985, 47.34405508669, 47.34499381991, 47.34561237908, 47.34573927714, 47.34603253966, 47.34617238197, 47.34622890822, 47.34645490526, 47.34679268819, 47.34728373378, 47.34757249041, 47.34761769, 47.34783821631, 47.34799594848, 47.34817583498, 47.3484010904, 47.34844744591, 47.34905143173, 47.34912450378, 47.3498276848, 47.34991292196, 47.35003957975}; // X
 const float polyX2[polySides2] PROGMEM = {8.5399408089, 8.5467977485, 8.5468962302, 8.5470294703, 8.5478175497, 8.5488755611, 8.5492242164, 8.5496769513, 8.5499578018, 8.5502616347, 8.5508429681, 8.5520744802, 8.5521919153, 8.5527754944, 8.5536403014, 8.5536709312, 8.5536954288, 8.5537619478, 8.5547407285, 8.5547580222, 8.5548092951, 8.5548883463, 8.5549343417, 8.5552081674, 8.555345609, 8.5554191487, 8.5556499044, 8.5558352113, 8.556883769, 8.5570916119, 8.557145757, 8.5572913528, 8.5573159896, 8.557521426, 8.5575394878, 8.5579221076, 8.5420004053, 8.5412106795, 8.541211248, 8.5411833691, 8.5411503967, 8.5411277323, 8.5410381433, 8.5410781205, 8.5409501236, 8.5407002007, 8.5406243854, 8.5405029448, 8.5404791744, 8.5404558303, 8.5403624552, 8.5401242495, 8.5399903984, 8.539943121, 8.539925367, 8.5397858841, 8.5399187277, 8.5399660632, 8.5400879194, 8.5401026547, 8.5401918651, 8.5401905025, 8.5400396962, 8.5400040658, 8.5399408089}; // Y
 
-// Variables to manage the timing of LED blinking
 unsigned long previousMillis = 0; // will store the last time LED was updated
-const long interval = 500; // interval at which to blink (milliseconds)
+const long interval = 700; // interval at which to blink (milliseconds) when no gps
+unsigned long lastLedOnMillis = 0; // will store the last time any LED was on (when there was an GPS signal)
+const long ledOffInterval = 2000; // interval to check if LEDs are off (milliseconds) all colors, when no gps
+const long fastBlinkInterval = 200; // interval blinking, when over the speed limit
 
 // Setup function to initialize hardware
 void setup() {
@@ -54,13 +56,13 @@ void setup() {
 void loop() {
   static bool ledState = LOW;
   unsigned long currentMillis = millis();
-  
+
   // Check if data is available from the GPS
   if (ss.available() > 0) {
     // Decode GPS data
     if (gps.encode(ss.read())) {
-        // Check if GPS location is updated
-        if (gps.location.isUpdated()) {
+      // Check if GPS location is updated
+      if (gps.location.isUpdated()) {
         // Determine if the current location is within the defined polygons
         bool inLargePolygon = pointInPolygon(gps.location.lng(), gps.location.lat(), polyX, polyY, polySides);
         bool inSmallPolygon = pointInPolygon(gps.location.lng(), gps.location.lat(), polyX2, polyY2, polySides2);
@@ -70,7 +72,8 @@ void loop() {
         // Determine the appropriate LED to control based on location and speed
         int ledPin = ROT; // Default to outside both polygons
         bool shouldBlink = speedKmH > 10;
-        
+        long currentInterval = interval; // Use normal interval by default
+
         // Set LED behavior based on the location
         if (inSmallPolygon) {
           ledPin = GRUN;
@@ -79,20 +82,29 @@ void loop() {
           ledPin = GELB;
         }
 
+        // Use faster blinking interval if over speed limit
+        if (shouldBlink) {
+          currentInterval = fastBlinkInterval;
+        }
+
+        // Reset all LEDs before setting the new state
+        digitalWrite(ROT, LOW);
+        digitalWrite(GELB, LOW);
+        digitalWrite(GRUN, LOW);
+
         // Manage LED blinking based on timing and condition
-        if (shouldBlink && currentMillis - previousMillis >= interval) {
-          previousMillis = currentMillis;
-          ledState = !ledState;
-          digitalWrite(ROT, LOW);
-          digitalWrite(GELB, LOW);
-          digitalWrite(GRUN, LOW);
-          digitalWrite(ledPin, ledState);
-        } else if (!shouldBlink) {
-          digitalWrite(ROT, LOW);
-          digitalWrite(GELB, LOW);
-          digitalWrite(GRUN, LOW);
+        if (shouldBlink) {
+          if (currentMillis - previousMillis >= currentInterval) {
+            previousMillis = currentMillis;
+            ledState = !ledState;
+            digitalWrite(ledPin, ledState);
+          }
+        } else {
           digitalWrite(ledPin, HIGH);
         }
+
+        // Update last time any LED was on
+        lastLedOnMillis = currentMillis;
 
         // Update LCD with current GPS coordinates
         lcd.clear();
@@ -102,14 +114,23 @@ void loop() {
         lcd.setCursor(0, 1);
         lcd.print("Lng:");
         lcd.print(gps.location.lng(), 6);
-        
-        // Reset previousMillis to currentMillis to manage LED blinking outside this block
-        previousMillis = currentMillis;
-        
-      } 
+      }
     }
-  } 
+  }
+
+  // Check if LEDs have been off for more than 2 seconds
+  if (currentMillis - lastLedOnMillis >= ledOffInterval) {
+    // Flash all LEDs
+    if (currentMillis - previousMillis >= interval) {
+      previousMillis = currentMillis;
+      ledState = !ledState;
+      digitalWrite(ROT, ledState);
+      digitalWrite(GELB, ledState);
+      digitalWrite(GRUN, ledState);
+    }
+  }
 }
+
 
 // Function to determine if a point is inside a polygon
 bool pointInPolygon(float x, float y, const float *polyX, const float *polyY, int polySides) {
