@@ -183,3 +183,8 @@ In conclusion, the Lakezone Geofence project represents a significant step forwa
 ## 7. Credits
 - [Yves Maurer Weisbrod](https://www.linkedin.com/in/yves-maurer-weisbrod/) - Thank you very much for the introduction to the world of QGIS and working with maps as part of the module "Geospatial data" in the MSc Data Science program at HSLU.
 - [Juliette Wicki](https://www.linkedin.com/in/juliette-wicki-7b9885273/) - Thank you so much for answering all my GIS questions!
+
+
+## 8. LICENSE
+CC BY-NC 4.0 - [](https://creativecommons.org/licenses/by-nc/4.0/)
+See file [LICENSE](/LICENSE)
