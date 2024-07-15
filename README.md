@@ -185,6 +185,7 @@ In conclusion, the Lakezone Geofence project represents a significant step forwa
 - [Juliette Wicki](https://www.linkedin.com/in/juliette-wicki-7b9885273/) - Thank you so much for answering all my GIS questions!
 
 
-## 8. LICENSE
+## 8. License
 CC BY-NC 4.0 - [https://creativecommons.org/licenses/by-nc/4.0/](https://creativecommons.org/licenses/by-nc/4.0/)  
-See file [LICENSE](/LICENSE)
+See file [LICENSE](/LICENSE)  
+Deutsche Patentanmeldung Nr. 10 2024 118 546.5  
