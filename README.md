@@ -186,5 +186,5 @@ In conclusion, the Lakezone Geofence project represents a significant step forwa
 
 
 ## 8. LICENSE
-CC BY-NC 4.0 - [](https://creativecommons.org/licenses/by-nc/4.0/)
+CC BY-NC 4.0 - [https://creativecommons.org/licenses/by-nc/4.0/](https://creativecommons.org/licenses/by-nc/4.0/)  
 See file [LICENSE](/LICENSE)
